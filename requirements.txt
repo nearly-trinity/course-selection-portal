@@ -1,0 +1,4 @@
+pandas
+django
+django-extensions
+re
