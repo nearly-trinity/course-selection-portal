@@ -1,6 +1,5 @@
 import pandas as pd
 import re
-# from genschedule.models import ClassData
 
 def bigPrint(df):
     with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
@@ -33,7 +32,6 @@ def getRows(filename):
     relevant_cols = ['course','title', 'credits', 'printed specs']
     df = df[relevant_cols]
     df.rename(columns={'printed specs':'prereqs'}, inplace=True)
-
     
     # only retain CSCI courses
     df = df[df.apply(lambda x: x['course'].split('-')[0] == 'CSCI', axis=1)]
@@ -48,6 +46,5 @@ def getRows(filename):
     
     return df
 
-def loadData(df):
-    return
+
 

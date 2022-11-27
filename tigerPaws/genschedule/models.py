@@ -12,3 +12,6 @@ class ClassData(models.Model):
 
     # store list of prereqs as a comma seperated string
     prereqs = models.TextField(max_length=None)
+
+    def __str__(self):
+        return f"{self.course}: {self.title}"
